@@ -1,6 +1,6 @@
-# MTT (Minimum Time Travel) simulations in WebGIS
+# MTT (Minimum Time Travel) simulations in Web-GIS
 
-One Paragraph of project description goes here
+Follow the instructions below to install and run fire behaviour simulations based on the MTT algorithm through a Web-GIS application.
 
 ## Getting Started
 
