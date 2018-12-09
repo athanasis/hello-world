@@ -6,10 +6,11 @@ Follow the instructions below to install and run fire behaviour simulations base
 
 
 * [XAMPP](https://www.apachefriends.org/index.html) - The open source package for PHP development environment including Apache Web server
-* [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [Python](https://www.python.org/) - The interpreted, object-oriented, high-level programming language
-* [curl](https://curl.haxx.se/) - The command line tool and library for transferring data with URLs
+* [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
+* [curl](https://curl.haxx.se/) - The command line tool and library for transferring data with URLs
+
 * [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library. Follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL 
 
 
@@ -19,11 +20,19 @@ Give examples
 
 ### Install XAMPP
 
-Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc).
+Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). Ensure that both Apache and MySQL are running.
 
 ### Install Python
 
-Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc).
+Install Python and ensure that the path to the python executables has been added to the PATH environmental variable. Please install mysqlclient (https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient) by choosing the appropriate .whl file based on the Python version installled. Download the appropariate .whl file and install the library by typing
+```
+pip install mysqlclient<version>.whl
+```
+
+
+### Install curl
+
+Install Python and ensure that the path to the python executables has been added to the PATH environmental variable.
 
 Say what the step will be
 
