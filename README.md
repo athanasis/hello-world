@@ -20,15 +20,19 @@ Give examples
 
 ### Install XAMPP
 
-Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). Ensure that both Apache and MySQL are running.
+Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). Ensure that both Apache and MySQL are running. 
+Go to http://localhost/phpmyadmin/index.php?lang=en and click on #User accounts#. 
 
 ### Install Python
 
-Install Python and ensure that the path to the python executables has been added to the PATH environmental variable. Please install mysqlclient (https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient) by choosing the appropriate .whl file based on the Python version installled. Download the appropariate .whl file and install the library by typing
+Install Python and ensure that the path to the python executables has been added to the PATH environmental variable. Please install mysqlclient (https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient) by choosing the appropriate .whl file based on the Python version installled. Download the appropariate .whl file and install the library by typing:
 ```
 pip install mysqlclient<version>.whl
 ```
-
+and then type:
+```
+pip install mysql-connector
+```
 
 ### Install curl
 
