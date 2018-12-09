@@ -8,6 +8,7 @@ Follow the instructions below to install and run fire behaviour simulations base
 * [XAMPP](https://www.apachefriends.org/index.html) - The open source package for PHP development environment including Apache Web server
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [Python](https://www.python.org/) - The interpreted, object-oriented, high-level programming language
+* [curl](https://curl.haxx.se/) - The command line tool and library for transferring data with URLs
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
 * [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library. Follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL 
 
@@ -16,9 +17,13 @@ Follow the instructions below to install and run fire behaviour simulations base
 Give examples
 ```
 
-### Installing
+### Install XAMPP
 
-A step by step series of examples that tell you how to get a development env running
+Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc).
+
+### Install Python
+
+Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc).
 
 Say what the step will be
 
