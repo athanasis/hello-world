@@ -4,7 +4,7 @@ Follow the instructions below to install and run fire behaviour simulations base
 
 ### Prerequisites
 
-* [MTT Fire Behavior Libraries](http://geoserver.org/) - The open source server for sharing geospatial data
+
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [Python](https://www.python.org/) - Python is an interpreted, object-oriented, high-level programming language
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
