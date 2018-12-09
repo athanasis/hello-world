@@ -1,9 +1,10 @@
 # MTT (Minimum Time Travel) simulations in Web-GIS
 
-Follow the instructions below to install and run fire behaviour simulations based on the MTT algorithm through a Web-GIS application.The instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Follow the instructions below to install and run fire behaviour simulations based on the MTT algorithm through a Web-GIS application.The instructions will get you a copy of the project up and running on your local machine for development and testing purposes. The project inculdes a copy of the MTT Fire Behavior Libraries (more details in http://sbrittain.net/FB/FB_API.htm).
 
 ### Prerequisites
 
+* [MTT Fire Behavior Libraries](http://geoserver.org/) - The open source server for sharing geospatial data
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [Python](https://www.python.org/) - Python is an interpreted, object-oriented, high-level programming language
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
