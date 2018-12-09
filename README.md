@@ -1,4 +1,4 @@
-# Project Title
+# MTT (Minimum Time Travel) simulations in WebGIS
 
 One Paragraph of project description goes here
 
