@@ -4,9 +4,12 @@ Follow the instructions below to install and run fire behaviour simulations base
 
 ### Prerequisites
 
+XAMPP is the most popular PHP development environment
+XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 
+* [XAMPP](https://www.apachefriends.org/index.html) - The open source package for PHP development environment including Apache Web server
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
-* [Python](https://www.python.org/) - Python is an interpreted, object-oriented, high-level programming language
+* [Python](https://www.python.org/) - The interpreted, object-oriented, high-level programming language
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
 * [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library. Follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL 
 
