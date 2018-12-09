@@ -21,7 +21,9 @@ Give examples
 ### Install XAMPP
 
 Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). Ensure that both Apache and MySQL are running. 
-Go to http://localhost/phpmyadmin/index.php?lang=en and click on #User accounts#. 
+Go to http://localhost/phpmyadmin/index.php?lang=en and click on User accounts. Click the Edit privileges link of the root user name of the localhost host name and change the password of the user.
+Open the C:\xampp\phpMyAdmin\config.inc.php file and set the password in the $cfg['Servers'][$i]['password'] variable.
+
 
 ### Install Python
 
@@ -36,7 +38,26 @@ pip install mysql-connector
 
 ### Install curl
 
-Install Python and ensure that the path to the python executables has been added to the PATH environmental variable.
+Install curl and ensure that the path to the bin folder has been added to the PATH environmental variable.
+
+### Install GDAL
+
+Open Python GUI and check the  version of your Python in the top right, e.g. MSC v. 1900 32 bit.
+Go in http://www.gisinternals.com/release.php and choose the appropropriate GDAL and MapServer version. Clicking the link will take you to the list of binaries (installers) to download.
+Locate the “core” installer, which has most of the components for GDAL.
+After downloading your version, install GDAL with standard settings.
+Next, return to the list of GDAL binaries and install the python bindings for your version of Python.
+
+Under the System variables pane, find the ‘Path’ variable, then click on Edit. Go to the end of the box and copy and paste the following:
+```
+;C:\Program Files (x86)\GDAL
+```
+
+ In the same System variables pane, click on “New” and then add the following in the dialogue box:
+
+Variable name: GDAL_DATA
+
+Variable value: C:\Program Files (x86)\GDAL\gdal-data
 
 Say what the step will be
 
