@@ -4,8 +4,6 @@ Follow the instructions below to install and run fire behaviour simulations base
 
 ### Prerequisites
 
-XAMPP is the most popular PHP development environment
-XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
 
 * [XAMPP](https://www.apachefriends.org/index.html) - The open source package for PHP development environment including Apache Web server
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
