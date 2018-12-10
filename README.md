@@ -63,6 +63,7 @@ Variable value: C:\Program Files (x86)\GDAL\gdal-data
 ```
 ![alt text](https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/02/2015-02-23-16_43_38-New-System-Variable.png)
 
+
 Add one more new variable by clicking “New…”. Add the following in the dialogue box:
 
 ```
@@ -73,9 +74,23 @@ Variable value: C:\Program Files (x86)\GDAL\gdalplugins
 ```
 For visual aid about the steps followed, follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL.
 
-## Running the tests
+### Install GeoServer
 
-Explain how to run the automated tests for this system
+Ensure that JRE  (Java Runtime Environment) is installed in your machine. If not install it from here https://www.oracle.com/technetwork/java/javase/downloads/index.html.
+
+Install the latest stable version of the GeoServer. Follow the wizard to install GeoServer and choose to be installed as a service. 
+After installation, go to http://localhost:8080/geoserver and remove any unnecessary workspaces, stores and layers.
+
+
+## Running tests
+
+Test your deployment by following these screen shots.
+![alt text](http://meteo.aegean.gr/github_pics/xamp_running.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/phpmyadmin_running.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/geoserver_running.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/gdal_translate.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/ogr2ogr.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/curl.PNG)
 
 ### Break down into end to end tests
 
