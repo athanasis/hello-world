@@ -11,12 +11,9 @@ Follow the instructions below to install and run fire behaviour simulations base
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
 * [curl](https://curl.haxx.se/) - The command line tool and library for transferring data with URLs
 
-* [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library. Follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL 
+* [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library.  
 
 
-```
-Give examples
-```
 
 ### Install XAMPP
 
@@ -24,6 +21,9 @@ Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only component
 Go to http://localhost/phpmyadmin/index.php?lang=en and click on User accounts. Click the Edit privileges link of the root user name of the localhost host name and change the password of the user.
 Open the C:\xampp\phpMyAdmin\config.inc.php file and set the password in the $cfg['Servers'][$i]['password'] variable.
 
+### Install MySQL
+
+Download MySQL Installer from https://dev.mysql.com/downloads/installer/ and execute it. Choose the appropriate Setup Type for your system. Typically you will choose Developer Default to install MySQL server and other MySQL tools related to MySQL development, helpful tools like MySQL Workbench. Or, choose the Custom setup type to manually select your desired MySQL products. Complete the installation process by following the instructions. This will install several MySQL products and start the MySQL server.
 
 ### Install Python
 
@@ -55,23 +55,23 @@ Under the System variables pane, find the ‘Path’ variable, then click on Edi
 
  In the same System variables pane, click on “New” and then add the following in the dialogue box:
 
+```
 Variable name: GDAL_DATA
 
 Variable value: C:\Program Files (x86)\GDAL\gdal-data
 
-Say what the step will be
+```
+![alt text](https://sandbox.idre.ucla.edu/sandbox/wp-content/uploads/2015/02/2015-02-23-16_43_38-New-System-Variable.png)
+
+Add one more new variable by clicking “New…”. Add the following in the dialogue box:
 
 ```
-Give the example
-```
+Variable name: GDAL_DRIVER_PATH
 
-And repeat
+Variable value: C:\Program Files (x86)\GDAL\gdalplugins
 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+For visual aid about the steps followed, follow these instructions (https://sandbox.idre.ucla.edu/sandbox/tutorials/installing-gdal-for-windows) to install GDAL.
 
 ## Running the tests
 
