@@ -102,7 +102,10 @@ Test your deployment by following these screen shots.
 
 Execute the <AEGIS_folder>\initial_configuration\create_styles.bat file
 Go to http://localhost/phpmyadmin and create a new database with the name firesimulationsdb with utf8-bin encoding.
-Execute the SQL query in <AEGIS_folder>\initial_configuration\simulationinfo.sql.
+
+Execute the SQL query in <AEGIS_folder>\initial_configuration\simulationinfo.sql through the GUI of the http://localhost/phpmyadmin.
+
+
 
 ```
 Give an example
