@@ -13,11 +13,15 @@ Follow the instructions below to install and run fire behaviour simulations base
 
 * [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library.  
 
-
+### Extract content
+Extract all content to a local folder. This folder will be named as <AEGIS_folder> from now on.
 
 ### Install XAMPP
 
-Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). Ensure that both Apache and MySQL are running. 
+Install XAMPP and choose Apache, MySQL, PHP and phpMyAdmin as the only components to be installed. Choose an installation folder  where you have full access. If IIS is already used in your machine, open services.msc and disable the World Wide Web Publishing Service (W3svc). The installation folder will be named as <xampp_installation_folder> from now on.
+
+Ensure that both Apache and MySQL are running (i.e.start the services). 
+
 Go to http://localhost/phpmyadmin/index.php?lang=en and click on User accounts. Click the Edit privileges link of the root user name of the localhost host name and change the password of the user.
 Open the C:\xampp\phpMyAdmin\config.inc.php file and set the password in the $cfg['Servers'][$i]['password'] variable.
 
@@ -93,7 +97,7 @@ After installation, go to http://localhost:8080/geoserver and remove any unneces
 Test your deployment by following these screen shots.
 ![alt text](http://meteo.aegean.gr/github_pics/xamp_running.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/phpmyadmin_running.PNG)
-![alt text](http://meteo.aegean.gr/github_pics/geoserver_running.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/areas_uploaded.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/gdal_translate.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/ogr2ogr.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/curl.PNG)
@@ -105,7 +109,9 @@ Go to http://localhost/phpmyadmin and create a new database with the name firesi
 
 Execute the SQL query in <AEGIS_folder>\initial_configuration\simulationinfo.sql through the GUI of the http://localhost/phpmyadmin.
 
+Execute the <AEGIS_folder>\initial_configuration\uploadareas.bat batch file.
 
+Copy the <AEGIS_folder>\aegis@github_htdocs folder to <xampp_installation_folder>\htdocs
 
 ```
 Give an example
