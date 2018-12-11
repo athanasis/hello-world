@@ -25,6 +25,8 @@ Ensure that both Apache and MySQL are running (i.e.start the services).
 Go to http://localhost/phpmyadmin/index.php?lang=en and click on User accounts. Click the Edit privileges link of the root user name of the localhost host name and change the password of the user.
 Open the C:\xampp\phpMyAdmin\config.inc.php file and set the password in the $cfg['Servers'][$i]['password'] variable.
 
+Copy the <AEGIS_folder>\aegis@github_htdocs folder to <xampp_installation_folder>\htdocs
+
 ### Install MySQL
 
 Download MySQL Installer from https://dev.mysql.com/downloads/installer/ and execute it. Choose the appropriate Setup Type for your system. Typically you will choose Developer Default to install MySQL server and other MySQL tools related to MySQL development, helpful tools like MySQL Workbench. Or, choose the Custom setup type to manually select your desired MySQL products. Complete the installation process by following the instructions. This will install several MySQL products and start the MySQL server.
@@ -92,12 +94,12 @@ Install the latest stable version of the GeoServer. Follow the wizard to install
 After installation, go to http://localhost:8080/geoserver and remove any unnecessary workspaces, stores and layers.
 
 
-## Running tests
+## Test your deployment
 
 Test your deployment by following these screen shots.
 ![alt text](http://meteo.aegean.gr/github_pics/xamp_running.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/phpmyadmin_running.PNG)
-![alt text](http://meteo.aegean.gr/github_pics/areas_uploaded.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/geoserver_running.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/gdal_translate.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/ogr2ogr.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/curl.PNG)
@@ -109,13 +111,16 @@ Go to http://localhost/phpmyadmin and create a new database with the name firesi
 
 Execute the SQL query in <AEGIS_folder>\initial_configuration\simulationinfo.sql through the GUI of the http://localhost/phpmyadmin.
 
-Execute the <AEGIS_folder>\initial_configuration\uploadareas.bat batch file.
+Edit the <AEGIS_folder>\initial_configuration\uploadareas.bat batch file and modify the areas_path variable.
+Save the file and execute the script.
 
-Copy the <AEGIS_folder>\aegis@github_htdocs folder to <xampp_installation_folder>\htdocs
+## Test your deployment again
+Test your deployment again by following these screen shots.
+![alt text](http://meteo.aegean.gr/github_pics/areas_uploaded.PNG)
 
-```
-Give an example
-```
+Open your  browser to http://localhost/aegis@github_htdocs/
+
+![alt text](http://meteo.aegean.gr/github_pics/aegis_running.PNG)
 
 ### And coding style tests
 
