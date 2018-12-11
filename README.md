@@ -35,6 +35,12 @@ and then type:
 ```
 pip install mysql-connector
 ```
+and then type:
+```
+pip install pywin32
+```
+Be sure to have the file <python_folder>\Lib\site-packages\win32\pywintypes36.dll (please note that “36” is the version of your Python installation). If you don’t have this file, take it from <python_folder>\Lib\site-packages\pywin32_system32\pywintypes36.dll and copy it into <python_folder>\Lib\site-packages\win32\
+
 
 ### Install curl
 
@@ -92,9 +98,11 @@ Test your deployment by following these screen shots.
 ![alt text](http://meteo.aegean.gr/github_pics/ogr2ogr.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/curl.PNG)
 
-### Break down into end to end tests
+### Initial deployment
 
-Explain what these tests test and why
+Execute the <AEGIS_folder>\initial_configuration\create_styles.bat file
+Go to http://localhost/phpmyadmin and create a new database with the name firesimulationsdb with utf8-bin encoding.
+Execute the SQL query in <AEGIS_folder>\initial_configuration\simulationinfo.sql.
 
 ```
 Give an example
