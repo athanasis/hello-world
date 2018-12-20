@@ -202,6 +202,6 @@ mmc Services.msc
 Find the mttservice service and enable it.
 
 ## Screenshots
-![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput1.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput2.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput3.PNG)
