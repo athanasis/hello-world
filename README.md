@@ -205,3 +205,8 @@ Find the mttservice service and enable it.
 ![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput2.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput3.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/mandra1.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/mandra2.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/mandra3.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/mandra4.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/googleearth.PNG)
