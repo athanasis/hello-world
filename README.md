@@ -148,7 +148,7 @@ Test your deployment again by following these screen shots.
 
 Open your  browser to http://localhost/aegis@github_htdocs/
 
-![alt text](http://meteo.aegean.gr/github_pics/aegis_running.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/initial_deploy.PNG)
 
 ## Install MTT as a service
 
@@ -201,4 +201,7 @@ mmc Services.msc
 ```
 Find the mttservice service and enable it.
 
-
+## Screenshots
+![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput1.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput2.PNG)
+![alt text](http://meteo.aegean.gr/github_pics/arrivaltimeoutput3.PNG)
