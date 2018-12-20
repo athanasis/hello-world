@@ -1,16 +1,14 @@
 # MTT (Minimum Time Travel) simulations in Web-GIS
 
-Follow the instructions below to install and run fire behaviour simulations based on the MTT algorithm through a Web-GIS application.The instructions will get you a copy of the project up and running on your local machine for development and testing purposes. The project inculdes a copy of the MTT Fire Behavior Libraries (more details in http://sbrittain.net/FB/FB_API.htm).
+Follow the instructions below to install and run fire behaviour simulations based on the MTT algorithm through a Web-GIS application.The instructions will get you a copy of the project up and running on your local machine for development and testing purposes. The project includes a copy of the MTT Fire Behavior Libraries (more details in http://sbrittain.net/FB/FB_API.htm).
 
 ### Prerequisites
-
 
 * [XAMPP](https://www.apachefriends.org/index.html) - The open source package for PHP development environment including Apache Web server
 * [Python](https://www.python.org/) - The interpreted, object-oriented, high-level programming language
 * [GeoServer](http://geoserver.org/) - The open source server for sharing geospatial data
 * [MySQL](https://www.mysql.com/) - The open source relational database management system (RDBMS)
 * [curl](https://curl.haxx.se/) - The command line tool and library for transferring data with URLs
-
 * [GDAL](https://www.gdal.org) - The Geospatial Data Abstraction Library.  
 
 ### Extract content
@@ -25,7 +23,7 @@ Ensure that both Apache and MySQL are running (i.e.start the services).
 Go to http://localhost/phpmyadmin/index.php?lang=en and click on User accounts. Click the Edit privileges link of the root user name of the localhost host name and change the password of the user.
 Open the C:\xampp\phpMyAdmin\config.inc.php file and set the password in the $cfg['Servers'][$i]['password'] variable.
 
-Copy the <AEGIS_folder>\aegis@github_htdocs folder to <xampp_installation_folder>\htdocs
+Copy the <AEGIS_folder>\aegis@github_htdocs folder to <xampp_installation_folder>\htdocs folder.
 
 ### Install MySQL
 
@@ -44,6 +42,10 @@ pip install mysql-connector
 and then type:
 ```
 pip install pywin32
+```
+and then type:
+```
+pip install ConfigParser
 ```
 Be sure to have the file <python_folder>\Lib\site-packages\win32\pywintypes36.dll (please note that “36” is the version of your Python installation). If you don’t have this file, take it from <python_folder>\Lib\site-packages\pywin32_system32\pywintypes36.dll and copy it into <python_folder>\Lib\site-packages\win32\
 
@@ -65,7 +67,7 @@ Under the System variables pane, find the ‘Path’ variable, then click on Edi
 ;C:\Program Files (x86)\GDAL
 ```
 
- In the same System variables pane, click on “New” and then add the following in the dialogue box:
+In the same System variables pane, click on “New” and then add the following in the dialogue box:
 
 ```
 Variable name: GDAL_DATA
@@ -104,7 +106,33 @@ Test your deployment by following these screen shots.
 ![alt text](http://meteo.aegean.gr/github_pics/ogr2ogr.PNG)
 ![alt text](http://meteo.aegean.gr/github_pics/curl.PNG)
 
-### Initial deployment
+### Initialization
+
+Under the System variables pane, find the ‘Path’ variable, click on “New” and then add a new System variable for the <AEGIS_folder> location:
+
+```
+Variable name: AEGIS_HOME
+
+Variable value: <path_to_the_AEGIS_folder>
+
+```
+
+Open the config.txt file from <AEGIS_folder>. Specify  the following configuration parameters:
+```
+password = <password for connecting to local mysql RDBMS.>
+user = <user for connecting to local mysql RDBMS.>
+host = <hostname of the deployment>
+database =<database name
+geoserver_account = admin:geoserver
+```
+A typical configuration should be:
+```
+password = <password for connecting to local mysql RDBMS.>
+user = root
+host = 127.0.0.1
+database =firesimulationsdb
+geoserver_account = admin:geoserver
+```
 
 Execute the <AEGIS_folder>\initial_configuration\create_styles.bat file
 Go to http://localhost/phpmyadmin and create a new database with the name firesimulationsdb with utf8-bin encoding.
@@ -122,17 +150,57 @@ Open your  browser to http://localhost/aegis@github_htdocs/
 
 ![alt text](http://meteo.aegean.gr/github_pics/aegis_running.PNG)
 
-### And coding style tests
+## Install MTT as a service
 
-Explain what these tests test and why
+Open an cmd as an Administrator and type:
 
 ```
-Give an example
+cd %AEGIS_HOME%
+```
+and then:
+```
+python MTTServiceClass.py install 
+
 ```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+## Running MTT in debuging mode
+
+Open an cmd as an Administrator and type:
+
+```
+mmc Services.msc
+```
+Find the mttservice service and disable it. Then type:
+
+```
+cd %AEGIS_HOME%
+```
+and then:
+```
+python MTTServiceClass.py debug 
+```
+
+
+## Final deployment
+
+Enable Open an cmd as an Administrator and type:
+
+```
+cd %AEGIS_HOME%
+```
+and then:
+```
+python MTTServiceClass.py update 
+
+```
+
+and finally Open an cmd as an Administrator and type:
+```
+mmc Services.msc
+```
+Find the mttservice service and enable it.
+
 
 ## Built With
 
